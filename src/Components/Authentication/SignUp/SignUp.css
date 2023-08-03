@@ -1,0 +1,105 @@
+.SignUpContainer{
+    width: 100%;
+    height: 100vh;
+    /* background: rgb(152, 236, 236); */
+}
+.signUplogoContainer{
+    width: 100%;
+    height: 20%;
+    /* background: gray; */
+}
+.signUpLogodiv{
+    height: 100%;
+    width: 17%;
+}
+.signUpLogodiv img{
+    width: 100%;
+    height: 100%;
+}
+.sigUpForm{
+    width: 100%;
+    height: 80%;
+    /* background: red; */
+    display: flex;
+}
+.leftSideSignUpContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.leftSideSignUp{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: green; */
+}
+.firstName{
+    width: 100%;
+    height: 17%;
+    /* background: #ffc6c6; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.firstNameInput{
+    width: 100%;
+    height: 50%;
+    outline: none;
+    border: 2px solid#127CDD;
+    border-radius: 5px;
+    padding-left: 6%;
+}
+.firstNameInputIcon{
+    position: absolute;
+    bottom: 33%;
+    left: 3%;
+}
+.firstNamePasswordIcon{
+    position: absolute;
+    bottom: 33%;
+    right: 3%;
+    cursor: pointer;
+}
+.RightSideSignup{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* background: rgb(182, 247, 182); */
+}
+.RightSideSignupContainer{
+    width: 95%;
+    height: 100%;
+}
+.RightSideSignupImg{
+    width: 100%;
+    height: 87%;
+    /* background: purple; */
+}
+.RightSideSignupImg img{
+    width: 100%;
+    height: 100%;
+}
+.signUpBtn{
+    width: 100%;
+    height: 13%;
+    /* background: white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.signUpBtn button{
+    width: 18%;
+    height: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background: #F7B905;
+}
+.signUpBtnMobile{
+    display: none;
+}

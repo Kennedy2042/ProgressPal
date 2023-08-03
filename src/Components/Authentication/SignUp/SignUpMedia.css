@@ -1,0 +1,89 @@
+@media only screen and (min-width: 320px) and (max-width: 580px) {
+
+    .SignUpContainer{
+        width: 100%;
+        height: 100vh;
+    }
+    .RightSideSignup{
+        display: none;
+    }
+    .leftSideSignUpContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .leftSideSignUp{
+        width: 95%;
+    }
+    .firstNameInput{
+        padding-left: 10%;
+    }
+    .signUpBtnMobile{
+        display: flex;
+        width: 100%;
+        height: 10%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .signUpBtnMobile button{
+        width: 20%;
+        height: 60%;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        background: #F7B905;
+    }
+
+
+
+
+}
+
+
+
+
+@media only screen and (min-width: 580px) and (max-width: 1024px) {
+
+    .SignUpContainer{
+        width: 100%;
+        height: 100vh;
+    }
+    .RightSideSignup{
+        display: none;
+    }
+    .leftSideSignUpContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .leftSideSignUp{
+        width: 95%;
+    }
+    .firstNameInput{
+        padding-left: 7%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .signUpBtnMobile{
+        display: flex;
+        width: 100%;
+        height: 12%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .signUpBtnMobile button{
+        width: 20%;
+        height: 60%;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        background: #F7B905;
+    }
+
+
+}
