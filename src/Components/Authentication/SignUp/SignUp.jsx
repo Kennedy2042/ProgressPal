@@ -1,85 +1,89 @@
 import React, { useState } from 'react'
-import "./SignUp.css"
-import { FaUserAlt } from "react-icons/fa"
-import { AiOutlineMail } from 'react-icons/ai'
+import { AiOutlineMail, AiOutlineFileImage } from 'react-icons/ai'
+import { FaUserAlt } from 'react-icons/fa'
 import { RiLockPasswordFill } from 'react-icons/ri'
-import { BiSolidShow, BiSolidHide } from "react-icons/bi"
+import { BiSolidHide, BiSolidShow } from 'react-icons/bi'
+import "./SignUp.css"
 import "./SignUpMedia.css"
+
 
 const SignUp = () => {
 
-    const [revealPassword, setRevealPassword] = useState(false)
-    const [confirmRevPsswrd, setConfirmRevPsswrd] = useState(false)
+    const [signUpPass, setSignUpPass] = useState(false)
+    const [signUpConfirmPass, setSignUpConfirmPass] = useState(false)
+    const [teacherName, setTeacherName] = useState("")
+    const [teacherClass, setTeacherClass] = useState("")
+    const [teacherEmail, setTeacherEmail] = useState("")
+
+
+
+    const url ="https://progresspal-8rxj.onrender.com/progressPal/register"
 
 
     return (
         <>
-            <div className="SignUpContainer">
-                <div className="signUplogoContainer">
-                    <div className="signUpLogodiv">
-                        <img src="./src/Components/ProgressPalLogo.png" alt="" />
-                    </div>
+            <div className="sigUpBody">
+                <div className="SignUpLogo">
+                    <img src="./src/Components/ProgressPalLogo.png" alt="" />
                 </div>
-                <div className="sigUpForm">
-                    <div className="leftSideSignUpContainer">
-                        <div className='leftSideSignUp'>
-                            <h1>Sign Up</h1>
-                            <div className="firstName">
-                                <h3>First Name</h3>
-                                <input type="text" placeholder='First Name' className='firstNameInput' />
-                                <FaUserAlt className='firstNameInputIcon' />
-                            </div>
-                            <div className="firstName">
-                                <h3>Last Name</h3>
-                                <input type="text" placeholder='Last Name' className='firstNameInput' />
-                                <FaUserAlt className='firstNameInputIcon' />
-                            </div>
-                            <div className="firstName">
-                                <h3>Email</h3>
-                                <input type="text" placeholder='Email' className='firstNameInput' />
-                                <AiOutlineMail className='firstNameInputIcon' />
-                            </div>
-                            <div className="firstName">
-                                <h3>Password</h3>
-                                <input type={revealPassword ? "text" : "password"} placeholder='Password' className='firstNameInput' />
-                                <RiLockPasswordFill className='firstNameInputIcon' />
-                                {
-                                    revealPassword ? <BiSolidHide className='firstNamePasswordIcon' onClick={() => {
-                                        setRevealPassword(false)
-                                    }} /> : <BiSolidShow className='firstNamePasswordIcon' onClick={() => {
-                                        setRevealPassword(true)
-                                    }} />
-                                }
-                            </div>
-                            <div className="firstName">
-                                <h3>Confirm Password</h3>
-                                <input type={confirmRevPsswrd ? "text" : "password"} placeholder='Confirm Password' className='firstNameInput' />
-                                <RiLockPasswordFill className='firstNameInputIcon' />
-                                {
-                                    confirmRevPsswrd ? <BiSolidHide className='firstNamePasswordIcon' onClick={() => {
-                                        setConfirmRevPsswrd(false)
-                                    }} /> : <BiSolidShow className='firstNamePasswordIcon' onClick={() => {
-                                        setConfirmRevPsswrd(true)
-                                    }} />
-                                }
-                            </div>
-                            <div className="signUpBtnMobile">
-                                <button>Back</button>
-                                <button>Submit</button>
-                            </div>
+                <div className="sigUpMainBody">
+                    <h1>Sign Up</h1>
+                    <div className="signUpNameHolder">
+                        <div className="signUpNameIconDiv">
+                            <FaUserAlt className='signUpNameIcon' />
                         </div>
-
+                        <input className='signUpNameInput' type="text" placeholder='teacher Name' value={teacherName} onChange={(e)=>setTeacherName(e.target.value)}/>
                     </div>
-                    <div className='RightSideSignup'>
-                        <div className="RightSideSignupContainer">
-                            <div className='RightSideSignupImg'>
-                                <img src="./src/Components/undraw_onboarding_re_6osc 1.png" alt="" />
-                            </div>
-                            <div className="signUpBtn">
-                                <button>Back</button>
-                                <button>Submit</button>
-                            </div>
+                    <div className="signUpNameHolder">
+                        <div className="signUpNameIconDiv">
+                            <FaUserAlt className='signUpNameIcon' />
                         </div>
+                        <input className='signUpNameInput' type="text" placeholder='Teacher Class' value={teacherClass} />
+                    </div>
+                    <div className="signUpNameHolder">
+                        <div className="signUpNameIconDiv">
+                            <AiOutlineMail className='signUpNameIcon' />
+                        </div>
+                        <input className='signUpNameInput' type="text" placeholder='Teacher Email' value={teacherEmail}/>
+                    </div>
+                    <div className="signUpNameHolder">
+                        <div className="signUpNameIconDiv">
+                            <AiOutlineMail className='signUpNameIcon' />
+                        </div>
+                        <input className='signUpNameInput' type="email" placeholder='Teacher Email' value={teacherAge}/>
+                    </div>
+                    <div className="signUpNameHolder">
+                        <div className="signUpNameIconDiv">
+                            <AiOutlineFileImage className='signUpNameIcon' />
+                        </div>
+                        <div className="signUpTeacherInput">
+                        <input className='' type="file" placeholder='Teacher Email' value={teacherImage}/>
+
+                        </div>
+                    </div>
+                    <div className="signUpPasswordHolder">
+                        <div className="signUpPasswordIconDiv">
+                            <RiLockPasswordFill className='signUpNameIcon' />
+                        </div>
+                        <input className='signUpPassordInput' type={signUpPass ? "text" : "password"} placeholder='Password' value={password}/>
+                        <div className="signUpshowPassword">
+                        { signUpPass ?
+                            <BiSolidHide style={{cursor: "pointer"}} onClick={()=>setSignUpPass(false)}/>: <BiSolidShow style={{cursor: "pointer"}} onClick={()=>setSignUpPass(true)}/>}
+                        </div>
+                    </div>
+                    <div className="signUpPasswordHolder">
+                        <div className="signUpPasswordIconDiv">
+                            <RiLockPasswordFill className='signUpNameIcon' />
+                        </div>
+                        <input className='signUpPassordInput' type={signUpConfirmPass ? "text" : "password"} placeholder='Confirm Password' value={confirmPassword} />
+                        <div className="signUpshowPassword">
+                            { signUpConfirmPass ?
+                            <BiSolidHide style={{cursor: "pointer"}} onClick={()=>setSignUpConfirmPass(false)}/>: <BiSolidShow style={{cursor: "pointer"}} onClick={()=>setSignUpConfirmPass(true)}/>} 
+                        </div>
+                    </div>
+                    <p>Already have an Account? <span>Sign In</span></p>
+                    <div className="signUpPasswordHolder">
+                        <button className='signUpSubmitBtn'>Submit</button>
                     </div>
                 </div>
             </div>

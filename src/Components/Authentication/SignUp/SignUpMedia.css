@@ -1,43 +1,94 @@
 @media only screen and (min-width: 320px) and (max-width: 580px) {
 
-    .SignUpContainer{
-        width: 100%;
-        height: 100vh;
-    }
-    .RightSideSignup{
-        display: none;
-    }
-    .leftSideSignUpContainer{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .leftSideSignUp{
+    .SignUpLogo {
         width: 95%;
-    }
-    .firstNameInput{
-        padding-left: 10%;
-    }
-    .signUpBtnMobile{
-        display: flex;
-        width: 100%;
         height: 10%;
-        justify-content: space-between;
+    }
+
+    .SignUpLogo img {
+        height: 100%;
+        width: 30%;
+    }
+
+    .sigUpMainBody {
+        width: 95%;
+        height: 65%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .signUpNameHolder {
+        width: 95%;
+        height: 20%;
+        display: flex;
         align-items: center;
     }
-    .signUpBtnMobile button{
-        width: 20%;
-        height: 60%;
-        border-radius: 5px;
-        cursor: pointer;
+
+    .signUpNameIconDiv {
+        width: 15%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid cyan;
+        border-left: 2px solid cyan;
+        border-top: 2px solid cyan;
+    }
+
+    .signUpNameInput {
+        width: 85%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid cyan;
+        border-right: 2px solid cyan;
+        border-top: 2px solid cyan;
+    }
+
+    .signUpPasswordHolder {
+        width: 95%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+    }
+
+    .signUpPasswordIconDiv {
+        width: 15%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid cyan;
+        border-left: 2px solid cyan;
+        border-top: 2px solid cyan;
+    }
+
+    .signUpPassordInput {
+        width: 70%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid cyan;
+        border-top: 2px solid cyan;
+    }
+
+    .signUpSubmitBtn {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: none;
         background: #F7B905;
+        cursor: pointer;
     }
-
-
-
 
 }
 
@@ -46,44 +97,94 @@
 
 @media only screen and (min-width: 580px) and (max-width: 1024px) {
 
-    .SignUpContainer{
-        width: 100%;
-        height: 100vh;
-    }
-    .RightSideSignup{
-        display: none;
-    }
-    .leftSideSignUpContainer{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .leftSideSignUp{
+    .SignUpLogo {
         width: 95%;
-    }
-    .firstNameInput{
-        padding-left: 7%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .signUpBtnMobile{
-        display: flex;
-        width: 100%;
-        height: 12%;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .signUpBtnMobile button{
-        width: 20%;
-        height: 60%;
-        border-radius: 5px;
-        cursor: pointer;
-        border: none;
-        background: #F7B905;
+        height: 15%;
     }
 
+    .SignUpLogo img {
+        height: 100%;
+        width: 30%;
+    }
+
+    .sigUpMainBody {
+        width: 65%;
+        height: 65%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .signUpNameHolder {
+        width: 95%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+    }
+
+    .signUpNameIconDiv {
+        width: 15%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid cyan;
+        border-left: 2px solid cyan;
+        border-top: 2px solid cyan;
+    }
+
+    .signUpNameInput {
+        width: 85%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid cyan;
+        border-right: 2px solid cyan;
+        border-top: 2px solid cyan;
+    }
+
+    .signUpPasswordHolder {
+        width: 95%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+    }
+
+    .signUpPasswordIconDiv {
+        width: 15%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid cyan;
+        border-left: 2px solid cyan;
+        border-top: 2px solid cyan;
+    }
+
+    .signUpPassordInput {
+        width: 70%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid cyan;
+        border-top: 2px solid cyan;
+    }
+
+    .signUpSubmitBtn {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: #F7B905;
+        cursor: pointer;
+    }
 
 }
