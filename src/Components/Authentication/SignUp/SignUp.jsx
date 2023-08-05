@@ -12,8 +12,10 @@ const SignUp = () => {
     const [signUpPass, setSignUpPass] = useState(false)
     const [signUpConfirmPass, setSignUpConfirmPass] = useState(false)
     const [teacherName, setTeacherName] = useState("")
-    const [teacherClass, setTeacherClass] = useState("")
-    const [teacherEmail, setTeacherEmail] = useState("")
+    // const [teacherClass, setTeacherClass] = useState("")
+    // const [teacherEmail, setTeacherEmail] = useState("")
+    // const [teacherAge, setTeacherAge] = useState("")
+    // const [teacherImage, setTeacherImage] = useState("")
 
 
 
@@ -38,26 +40,26 @@ const SignUp = () => {
                         <div className="signUpNameIconDiv">
                             <FaUserAlt className='signUpNameIcon' />
                         </div>
-                        <input className='signUpNameInput' type="text" placeholder='Teacher Class' value={teacherClass} />
+                        <input className='signUpNameInput' type="text" placeholder='Teacher Class'  />
                     </div>
                     <div className="signUpNameHolder">
                         <div className="signUpNameIconDiv">
                             <AiOutlineMail className='signUpNameIcon' />
                         </div>
-                        <input className='signUpNameInput' type="text" placeholder='Teacher Email' value={teacherEmail}/>
+                        <input className='signUpNameInput' type="text" placeholder='Teacher Age' />
                     </div>
                     <div className="signUpNameHolder">
                         <div className="signUpNameIconDiv">
                             <AiOutlineMail className='signUpNameIcon' />
                         </div>
-                        <input className='signUpNameInput' type="email" placeholder='Teacher Email' value={teacherAge}/>
+                        <input className='signUpNameInput' type="email" placeholder='Teacher Email' />
                     </div>
                     <div className="signUpNameHolder">
                         <div className="signUpNameIconDiv">
                             <AiOutlineFileImage className='signUpNameIcon' />
                         </div>
                         <div className="signUpTeacherInput">
-                        <input className='' type="file" placeholder='Teacher Email' value={teacherImage}/>
+                        <input className='' type="file" placeholder='Teacher Image' />
 
                         </div>
                     </div>
@@ -65,7 +67,7 @@ const SignUp = () => {
                         <div className="signUpPasswordIconDiv">
                             <RiLockPasswordFill className='signUpNameIcon' />
                         </div>
-                        <input className='signUpPassordInput' type={signUpPass ? "text" : "password"} placeholder='Password' value={password}/>
+                        <input className='signUpPassordInput' type={signUpPass ? "text" : "password"} placeholder='Password' />
                         <div className="signUpshowPassword">
                         { signUpPass ?
                             <BiSolidHide style={{cursor: "pointer"}} onClick={()=>setSignUpPass(false)}/>: <BiSolidShow style={{cursor: "pointer"}} onClick={()=>setSignUpPass(true)}/>}
@@ -75,13 +77,13 @@ const SignUp = () => {
                         <div className="signUpPasswordIconDiv">
                             <RiLockPasswordFill className='signUpNameIcon' />
                         </div>
-                        <input className='signUpPassordInput' type={signUpConfirmPass ? "text" : "password"} placeholder='Confirm Password' value={confirmPassword} />
+                        <input className='signUpPassordInput' type={signUpConfirmPass ? "text" : "password"} placeholder='Confirm Password'  />
                         <div className="signUpshowPassword">
                             { signUpConfirmPass ?
                             <BiSolidHide style={{cursor: "pointer"}} onClick={()=>setSignUpConfirmPass(false)}/>: <BiSolidShow style={{cursor: "pointer"}} onClick={()=>setSignUpConfirmPass(true)}/>} 
                         </div>
                     </div>
-                    <p>Already have an Account? <span>Sign In</span></p>
+                    <p style={{width: "95%"}}>Already have an Account? <span>Log In</span></p>
                     <div className="signUpPasswordHolder">
                         <button className='signUpSubmitBtn'>Submit</button>
                     </div>

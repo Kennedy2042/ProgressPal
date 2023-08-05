@@ -5,18 +5,22 @@ import ResetPassword from './Components/Authentication/ResetPassword/ResetPasswo
 import SchRegister from './Components/Authentication/SchRegistration/SchRegister'
 import SignUp from './Components/Authentication/SignUp/SignUp'
 import Verification from './Components/Authentication/Verification/Verification'
+import Logout from "./Components/Authentication/LogOut/Logout"
+import LogoutSucess from './Components/Authentication/LogoutSucess/LogoutSucess'
+
 
 function App() {
 
   return (
     <>
       <SchRegister/>
-      <h1>Final Project</h1>
       <SignUp/>
       <Login/>
       <Verification/>
       <ForgetPassword/>
       <ResetPassword/>
+      <Logout/>
+      <LogoutSucess/>
     </>
   )
 }
