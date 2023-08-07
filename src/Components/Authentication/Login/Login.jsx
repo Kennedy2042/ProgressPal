@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import './Login.css'
+import './LoginMedia.css'
 import axios from 'axios'
+import { BiSolidHide, BiSolidShow } from 'react-icons/bi'
+
+
 
 const Login = () => {
 
@@ -8,6 +12,7 @@ const Login = () => {
     const [password, setPassword] = useState("")
     const [successErrorMessage, setSuccessErrorMessage] = useState("")
     const [emailError, setEmailError] = useState("")
+    const [loginShowpass, setLoginShowPass] = useState(false)
 
     const url = "https://progresspal-8rxj.onrender.com/progressPal/login"
     const data = { schoolEmail, password }
@@ -39,31 +44,42 @@ const Login = () => {
     }
 
     return (
-        <div className='holder'>
+        <div className='LoginMainContainer'>
+            <div className='LoginLogo'>
+                <img src="./src/Components/ProgressPalLogo.png" alt="" />
 
-            <div className='holder2'>
-                <div className='Logo'>
-                    <img src="./src/Components/ProgressPalLogo.png" alt="" />
+            </div>
 
-                </div>
-                <div className='down'>
+            <div className='LoginBody'>
+                <div className='LoginLowerBody'>
 
-                    <div className='text'>
-                        <h1>Welcome To ProgressPal</h1>
+                    <div className='LoginWelTextDiv'>
+                        <h1 className='LoginWelText'>Welcome To ProgressPal</h1>
                     </div>
-                    <input type="email" className={`${emailError.length > 0 ? "error" : ""} Input`} placeholder='UserName' value={schoolEmail} onChange={(e) => setSchoolEmail(e.target.value)} />
-                    <p>{emailError}</p>
-                    <input type="password" className='Input' placeholder='PassWord' value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <p>{successErrorMessage}</p>
-                    <div className='text2'>
-                        <div className='left'>
-                            <p>Don't have an account? <span>Sign in</span></p>
+                    <div className="EmailInputDiv">
+                        <input type="email" className={`${emailError.length > 0 ? "error" : ""} LoginEmailInput`} placeholder='Email' value={schoolEmail} onChange={(e) => setSchoolEmail(e.target.value)} />
+                        <p>{emailError}</p>
+                    </div>
+                    <div className="PasswordInputDivHolder">
+                        <div className="PasswordInputDiv">
+                            <input type={loginShowpass ? "text" : "password"} className='LoginPassInput' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <div className="LoginShowPass">
+                                {
+                                    loginShowpass ? <BiSolidHide onClick={()=>{setLoginShowPass(false)}}/> : <BiSolidShow onClick={()=>{setLoginShowPass(true)}}/>
+                                }
+                            </div>
+                        </div>
+                        <p>{successErrorMessage}</p>
+                    </div>
+                    <div className='Logintext2'>
+                        <p className='AcctParagrph'>Don't have an account? <span className='LoginSpan'>Sign Up</span></p>
+                        <p className='AcctParagrph' style={{ cursor: "pointer" }}>Forgotten password?</p>
+                        {/* <div className='left'>
                         </div>
                         <div className='right'>
-                            <p style={{cursor: "pointer"} }>Forgotten password?</p>
-                        </div>
+                        </div> */}
                     </div>
-                    <button onClick={SignUp}>LOGIN</button>
+                    <button className='LoginBtn' onClick={SignUp}>LOGIN</button>
                     <h2>Register Your School</h2>
                 </div>
             </div>
